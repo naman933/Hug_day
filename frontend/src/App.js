@@ -339,55 +339,61 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* ── avatars row ──────────────────────── */}
-        <div className="relative flex items-center justify-center gap-8 md:gap-16 mb-14">
-          {/* Naman */}
-          <motion.div
-            data-testid="avatar-naman"
-            className={`avatar-bubble ${!isHugged ? "float-left" : "hug-glow"}`}
-            animate={
-              isHugged
-                ? { x: 40, scale: 1.05 }
-                : { x: 0, scale: 1 }
-            }
-            transition={spring}
-          >
-            <span className="initial">N</span>
-            <AnimatePresence>
-              {!isHugged && (
-                <motion.span
-                  className="name-label"
-                  exit={{ opacity: 0 }}
+        {/* ── characters area ──────────────────── */}
+        <div className="relative flex items-center justify-center mb-14" style={{ minHeight: 220 }}>
+          <AnimatePresence mode="wait">
+            {!isHugged ? (
+              /* ── separated characters ──────── */
+              <motion.div
+                key="separated"
+                className="flex items-end justify-center gap-4 md:gap-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                {/* Naman */}
+                <motion.div
+                  data-testid="avatar-naman"
+                  className="flex flex-col items-center float-left"
+                  initial={{ x: -30, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.2, ...spring }}
                 >
-                  Naman
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </motion.div>
+                  <BoyCharacter className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
+                  <span className="font-body font-semibold text-sm text-rose-800 mt-1">Naman</span>
+                </motion.div>
 
-          {/* Sumedha */}
-          <motion.div
-            data-testid="avatar-sumedha"
-            className={`avatar-bubble ${!isHugged ? "float-right" : "hug-glow"}`}
-            animate={
-              isHugged
-                ? { x: -40, scale: 1.05 }
-                : { x: 0, scale: 1 }
-            }
-            transition={spring}
-          >
-            <span className="initial">S</span>
-            <AnimatePresence>
-              {!isHugged && (
-                <motion.span
-                  className="name-label"
-                  exit={{ opacity: 0 }}
+                {/* Sumedha */}
+                <motion.div
+                  data-testid="avatar-sumedha"
+                  className="flex flex-col items-center float-right"
+                  initial={{ x: 30, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, ...spring }}
                 >
-                  Sumedha
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </motion.div>
+                  <GirlCharacter className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
+                  <span className="font-body font-semibold text-sm text-rose-800 mt-1">Sumedha</span>
+                </motion.div>
+              </motion.div>
+            ) : (
+              /* ── hugging characters ────────── */
+              <motion.div
+                key="hugging"
+                data-testid="hugging-couple"
+                className="flex flex-col items-center"
+                initial={{ scale: 0.7, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 100, damping: 12 }}
+              >
+                <div className="relative">
+                  <HuggingCouple className="w-44 h-48 md:w-56 md:h-60 drop-shadow-xl" />
+                  {/* glow behind */}
+                  <div className="absolute inset-0 -z-10 rounded-full bg-rose-200/40 blur-3xl scale-110" />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* particles */}
           {showParticles && <HeartParticles />}
