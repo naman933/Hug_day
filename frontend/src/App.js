@@ -356,7 +356,7 @@ export default function App() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2, ...spring }}
                 >
-                  <BubuPanda className="w-32 h-36 md:w-40 md:h-48 drop-shadow-lg" />
+                  <BoyCharacter className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
                   <span className="font-body font-semibold text-sm text-rose-800 mt-1">Naman</span>
                 </motion.div>
 
@@ -368,7 +368,7 @@ export default function App() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.3, ...spring }}
                 >
-                  <DuduBear className="w-32 h-36 md:w-40 md:h-48 drop-shadow-lg" />
+                  <DuduBear className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
                   <span className="font-body font-semibold text-sm text-rose-800 mt-1">Sumedha</span>
                 </motion.div>
               </motion.div>
@@ -383,7 +383,7 @@ export default function App() {
                 transition={{ delay: 0.2, type: "spring", stiffness: 100, damping: 12 }}
               >
                 <div className="relative">
-                  <HuggingCouple className="w-52 h-48 md:w-64 md:h-56 drop-shadow-xl" />
+                  <HuggingCouple className="w-44 h-48 md:w-56 md:h-60 drop-shadow-xl" />
                   {/* glow behind */}
                   <div className="absolute inset-0 -z-10 rounded-full bg-rose-200/40 blur-3xl scale-110" />
                 </div>
