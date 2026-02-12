@@ -368,7 +368,7 @@ export default function App() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.3, ...spring }}
                 >
-                  <DuduBear className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
+                  <GirlCharacter className="w-28 h-36 md:w-36 md:h-48 drop-shadow-lg" />
                   <span className="font-body font-semibold text-sm text-rose-800 mt-1">Sumedha</span>
                 </motion.div>
               </motion.div>
