@@ -10,166 +10,161 @@ const HeartIcon = ({ size = 20, color = "#E11D48" }) => (
   </svg>
 );
 
-/* ── Bubu the Panda (Naman) — separated pose ─────────── */
-const BubuPanda = ({ className = "" }) => (
-  <svg viewBox="0 0 200 240" className={className} xmlns="http://www.w3.org/2000/svg">
-    {/* Ears */}
-    <ellipse cx="60" cy="42" rx="26" ry="24" fill="#2D2D2D" />
-    <ellipse cx="140" cy="42" rx="26" ry="24" fill="#2D2D2D" />
-    <ellipse cx="60" cy="42" rx="16" ry="14" fill="#404040" />
-    <ellipse cx="140" cy="42" rx="16" ry="14" fill="#404040" />
-    {/* Head */}
-    <ellipse cx="100" cy="90" rx="68" ry="62" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    {/* Eye patches */}
-    <ellipse cx="74" cy="88" rx="18" ry="16" fill="#2D2D2D" transform="rotate(-8 74 88)" />
-    <ellipse cx="126" cy="88" rx="18" ry="16" fill="#2D2D2D" transform="rotate(8 126 88)" />
+/* ── cute boy character SVG ───────────────────────────── */
+const BoyCharacter = ({ className = "" }) => (
+  <svg viewBox="0 0 200 280" className={className} xmlns="http://www.w3.org/2000/svg">
+    {/* Hair */}
+    <ellipse cx="100" cy="68" rx="58" ry="55" fill="#4A3728" />
+    <rect x="42" y="50" width="116" height="30" rx="8" fill="#4A3728" />
+    {/* Face */}
+    <ellipse cx="100" cy="85" rx="50" ry="48" fill="#FDDCB5" />
+    {/* Hair fringe */}
+    <path d="M50 68 Q70 40 100 45 Q130 40 150 68 Q145 52 120 48 Q100 35 80 48 Q55 52 50 68Z" fill="#4A3728" />
     {/* Eyes */}
-    <ellipse cx="74" cy="88" rx="8" ry="9" fill="#1A1A1A" />
-    <ellipse cx="126" cy="88" rx="8" ry="9" fill="#1A1A1A" />
-    <circle cx="78" cy="84" r="3.5" fill="white" />
-    <circle cx="130" cy="84" r="3.5" fill="white" />
+    <ellipse cx="80" cy="88" rx="6" ry="7" fill="#2D1B0E" />
+    <ellipse cx="120" cy="88" rx="6" ry="7" fill="#2D1B0E" />
+    <circle cx="82" cy="86" r="2.5" fill="white" />
+    <circle cx="122" cy="86" r="2.5" fill="white" />
     {/* Blush */}
-    <ellipse cx="52" cy="106" rx="14" ry="9" fill="#FFB5C5" opacity="0.7" />
-    <ellipse cx="148" cy="106" rx="14" ry="9" fill="#FFB5C5" opacity="0.7" />
-    {/* Nose */}
-    <ellipse cx="100" cy="102" rx="5" ry="3.5" fill="#2D2D2D" />
-    {/* Mouth — happy open with tongue */}
-    <path d="M90 108 Q100 120 110 108" stroke="#2D2D2D" strokeWidth="2" fill="none" strokeLinecap="round" />
-    <path d="M96 112 Q100 118 104 112" fill="#FF8B9A" />
-    {/* Body */}
-    <ellipse cx="100" cy="185" rx="55" ry="52" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    {/* Belly circle */}
-    <ellipse cx="100" cy="188" rx="32" ry="30" fill="#F5F5F5" />
-    {/* Left arm — waving out */}
-    <path d="M48 170 Q25 155 15 140" stroke="white" strokeWidth="24" strokeLinecap="round" fill="none" />
-    <path d="M48 170 Q25 155 15 140" stroke="#E8E8E8" strokeWidth="1" fill="none" />
-    <circle cx="15" cy="138" r="12" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    {/* Right arm — waving out */}
-    <path d="M152 170 Q175 155 185 140" stroke="white" strokeWidth="24" strokeLinecap="round" fill="none" />
-    <path d="M152 170 Q175 155 185 140" stroke="#E8E8E8" strokeWidth="1" fill="none" />
-    <circle cx="185" cy="138" r="12" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    {/* Feet */}
-    <ellipse cx="72" cy="232" rx="20" ry="10" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    <ellipse cx="128" cy="232" rx="20" ry="10" fill="white" stroke="#E8E8E8" strokeWidth="1" />
+    <ellipse cx="68" cy="100" rx="10" ry="6" fill="#F9A8B8" opacity="0.5" />
+    <ellipse cx="132" cy="100" rx="10" ry="6" fill="#F9A8B8" opacity="0.5" />
+    {/* Smile */}
+    <path d="M88 106 Q100 118 112 106" stroke="#C47A5A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Body / T-shirt */}
+    <path d="M60 130 Q60 140 55 170 L55 220 Q55 235 100 235 Q145 235 145 220 L145 170 Q140 140 140 130 Q130 125 100 125 Q70 125 60 130Z" fill="#5B8DBE" />
+    {/* Collar */}
+    <path d="M80 128 L100 145 L120 128" stroke="#4A7DAD" strokeWidth="2" fill="none" />
+    {/* Arms reaching out (right side) */}
+    <path d="M140 150 Q160 148 178 140 Q185 138 182 145 Q175 158 155 165 Q145 168 140 170" fill="#FDDCB5" stroke="#F0C9A0" strokeWidth="1" />
+    {/* Left arm relaxed */}
+    <path d="M60 150 Q45 160 35 180 Q32 188 38 186 Q50 178 55 168 Q58 162 60 170" fill="#FDDCB5" stroke="#F0C9A0" strokeWidth="1" />
+    {/* Hands */}
+    <circle cx="182" cy="142" r="8" fill="#FDDCB5" />
+    <circle cx="35" cy="183" r="8" fill="#FDDCB5" />
+    {/* Legs */}
+    <rect x="72" y="232" width="22" height="35" rx="8" fill="#3D5A80" />
+    <rect x="106" y="232" width="22" height="35" rx="8" fill="#3D5A80" />
+    {/* Shoes */}
+    <ellipse cx="83" cy="270" rx="16" ry="8" fill="#2D1B0E" />
+    <ellipse cx="117" cy="270" rx="16" ry="8" fill="#2D1B0E" />
   </svg>
 );
 
-/* ── Dudu the Brown Bear (Sumedha) — separated pose ──── */
-const DuduBear = ({ className = "" }) => (
-  <svg viewBox="0 0 200 240" className={className} xmlns="http://www.w3.org/2000/svg">
-    {/* Ears */}
-    <ellipse cx="60" cy="44" rx="22" ry="20" fill="#6B4226" />
-    <ellipse cx="140" cy="44" rx="22" ry="20" fill="#6B4226" />
-    <ellipse cx="60" cy="44" rx="13" ry="11" fill="#C8956C" />
-    <ellipse cx="140" cy="44" rx="13" ry="11" fill="#C8956C" />
-    {/* Head */}
-    <ellipse cx="100" cy="90" rx="65" ry="60" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    {/* Muzzle area */}
-    <ellipse cx="100" cy="104" rx="28" ry="20" fill="#DEBB9A" />
+/* ── cute girl character SVG ──────────────────────────── */
+const GirlCharacter = ({ className = "" }) => (
+  <svg viewBox="0 0 200 280" className={className} xmlns="http://www.w3.org/2000/svg">
+    {/* Hair (long) */}
+    <ellipse cx="100" cy="72" rx="62" ry="58" fill="#5C2D0E" />
+    {/* Hair sides (long flowing) */}
+    <path d="M40 70 Q35 120 38 180 Q40 190 48 185 Q50 130 48 80Z" fill="#5C2D0E" />
+    <path d="M160 70 Q165 120 162 180 Q160 190 152 185 Q150 130 152 80Z" fill="#5C2D0E" />
+    {/* Face */}
+    <ellipse cx="100" cy="88" rx="48" ry="46" fill="#FDE5C8" />
+    {/* Hair fringe with bangs */}
+    <path d="M52 72 Q60 42 80 38 Q100 32 120 38 Q140 42 148 72 Q140 55 125 50 Q115 42 100 44 Q85 42 75 50 Q60 55 52 72Z" fill="#5C2D0E" />
+    {/* Small hair clips */}
+    <circle cx="55" cy="68" r="5" fill="#F43F5E" />
+    <circle cx="145" cy="68" r="5" fill="#F43F5E" />
     {/* Eyes */}
-    <ellipse cx="76" cy="86" rx="7" ry="8" fill="#3D2B1F" />
-    <circle cx="79" cy="83" r="3" fill="white" />
-    {/* Right eye — winking */}
-    <path d="M118 86 Q126 80 134 86" stroke="#3D2B1F" strokeWidth="3" fill="none" strokeLinecap="round" />
+    <ellipse cx="80" cy="90" rx="6" ry="8" fill="#2D1B0E" />
+    <ellipse cx="120" cy="90" rx="6" ry="8" fill="#2D1B0E" />
+    <circle cx="82" cy="87" r="2.5" fill="white" />
+    <circle cx="122" cy="87" r="2.5" fill="white" />
+    {/* Eyelashes */}
+    <path d="M74 84 L70 80" stroke="#2D1B0E" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M126 84 L130 80" stroke="#2D1B0E" strokeWidth="1.5" strokeLinecap="round" />
     {/* Blush */}
-    <ellipse cx="56" cy="102" rx="13" ry="9" fill="#F0C27A" opacity="0.7" />
-    <ellipse cx="144" cy="102" rx="13" ry="9" fill="#F0C27A" opacity="0.7" />
-    {/* Nose */}
-    <ellipse cx="100" cy="98" rx="6" ry="4.5" fill="#3D2B1F" />
-    {/* Mouth — gentle smile */}
-    <path d="M92 108 Q100 116 108 108" stroke="#3D2B1F" strokeWidth="2" fill="none" strokeLinecap="round" />
-    {/* Body */}
-    <ellipse cx="100" cy="185" rx="52" ry="50" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    {/* Belly */}
-    <ellipse cx="100" cy="188" rx="30" ry="28" fill="#DEBB9A" />
-    {/* Left arm — reaching out */}
-    <path d="M50 170 Q28 158 18 145" stroke="#C8956C" strokeWidth="22" strokeLinecap="round" fill="none" />
-    <path d="M50 170 Q28 158 18 145" stroke="#B8855C" strokeWidth="1" fill="none" />
-    <circle cx="18" cy="143" r="11" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    {/* Right arm — reaching out */}
-    <path d="M150 170 Q172 158 182 145" stroke="#C8956C" strokeWidth="22" strokeLinecap="round" fill="none" />
-    <path d="M150 170 Q172 158 182 145" stroke="#B8855C" strokeWidth="1" fill="none" />
-    <circle cx="182" cy="143" r="11" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    {/* Feet */}
-    <ellipse cx="74" cy="230" rx="18" ry="10" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    <ellipse cx="126" cy="230" rx="18" ry="10" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
+    <ellipse cx="68" cy="102" rx="10" ry="6" fill="#F9A8B8" opacity="0.6" />
+    <ellipse cx="132" cy="102" rx="10" ry="6" fill="#F9A8B8" opacity="0.6" />
+    {/* Smile */}
+    <path d="M88 108 Q100 120 112 108" stroke="#C47A5A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Dress */}
+    <path d="M60 132 Q55 145 45 210 Q44 230 100 235 Q156 230 155 210 L140 132 Q130 126 100 126 Q70 126 60 132Z" fill="#E11D48" />
+    {/* Collar/neckline */}
+    <path d="M78 130 Q100 142 122 130" stroke="#C41640" strokeWidth="1.5" fill="none" />
+    {/* Arms reaching out (left side) */}
+    <path d="M60 152 Q40 150 22 142 Q15 140 18 147 Q25 160 45 167 Q55 170 60 172" fill="#FDE5C8" stroke="#F0C9A0" strokeWidth="1" />
+    {/* Right arm relaxed */}
+    <path d="M140 152 Q155 162 165 182 Q168 190 162 188 Q150 180 145 170 Q142 164 140 172" fill="#FDE5C8" stroke="#F0C9A0" strokeWidth="1" />
+    {/* Hands */}
+    <circle cx="18" cy="144" r="8" fill="#FDE5C8" />
+    <circle cx="165" cy="185" r="8" fill="#FDE5C8" />
+    {/* Legs */}
+    <rect x="75" y="230" width="18" height="30" rx="8" fill="#FDE5C8" />
+    <rect x="107" y="230" width="18" height="30" rx="8" fill="#FDE5C8" />
+    {/* Shoes */}
+    <ellipse cx="84" cy="264" rx="14" ry="7" fill="#E11D48" />
+    <ellipse cx="116" cy="264" rx="14" ry="7" fill="#E11D48" />
   </svg>
 );
 
-/* ── Bubu & Dudu hugging together (post-hug) ─────────── */
+/* ── hugging couple SVG (post-hug) ────────────────────── */
 const HuggingCouple = ({ className = "" }) => (
-  <svg viewBox="0 0 320 260" className={className} xmlns="http://www.w3.org/2000/svg">
-    {/* ── Bubu (Panda, left) ── */}
-    {/* Panda ears */}
-    <ellipse cx="80" cy="38" rx="22" ry="20" fill="#2D2D2D" />
-    <ellipse cx="156" cy="38" rx="22" ry="20" fill="#2D2D2D" />
-    <ellipse cx="80" cy="38" rx="13" ry="11" fill="#404040" />
-    <ellipse cx="156" cy="38" rx="13" ry="11" fill="#404040" />
-    {/* Panda head */}
-    <ellipse cx="118" cy="82" rx="60" ry="55" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    {/* Eye patches */}
-    <ellipse cx="96" cy="78" rx="15" ry="14" fill="#2D2D2D" transform="rotate(-8 96 78)" />
-    <ellipse cx="140" cy="78" rx="15" ry="14" fill="#2D2D2D" transform="rotate(8 140 78)" />
-    {/* Eyes — closed happy */}
-    <path d="M88 78 Q96 72 104 78" stroke="#1A1A1A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-    <path d="M132 78 Q140 72 148 78" stroke="#1A1A1A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-    {/* Blush */}
-    <ellipse cx="78" cy="94" rx="12" ry="8" fill="#FFB5C5" opacity="0.7" />
-    <ellipse cx="158" cy="94" rx="12" ry="8" fill="#FFB5C5" opacity="0.7" />
-    {/* Nose */}
-    <ellipse cx="118" cy="90" rx="4.5" ry="3" fill="#2D2D2D" />
-    {/* Smile */}
-    <path d="M110 96 Q118 106 126 96" stroke="#2D2D2D" strokeWidth="2" fill="none" strokeLinecap="round" />
-    {/* Panda body */}
-    <ellipse cx="118" cy="172" rx="48" ry="46" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    <ellipse cx="118" cy="175" rx="28" ry="26" fill="#F5F5F5" />
-    {/* Panda right arm — wrapping around Dudu */}
-    <path d="M164 158 Q190 150 210 155 Q230 162 235 178" stroke="white" strokeWidth="22" strokeLinecap="round" fill="none" />
-    <path d="M164 158 Q190 150 210 155 Q230 162 235 178" stroke="#E8E8E8" strokeWidth="1" fill="none" />
-    {/* Panda left arm — behind */}
-    <path d="M72 162 Q55 172 48 185" stroke="white" strokeWidth="20" strokeLinecap="round" fill="none" />
-    <path d="M72 162 Q55 172 48 185" stroke="#E8E8E8" strokeWidth="1" fill="none" />
-    {/* Panda feet */}
-    <ellipse cx="92" cy="215" rx="16" ry="9" fill="white" stroke="#E8E8E8" strokeWidth="1" />
-    <ellipse cx="140" cy="215" rx="16" ry="9" fill="white" stroke="#E8E8E8" strokeWidth="1" />
+  <svg viewBox="0 0 280 300" className={className} xmlns="http://www.w3.org/2000/svg">
+    {/* ─── Boy (left, turned right) ─── */}
+    {/* Boy hair */}
+    <ellipse cx="105" cy="68" rx="52" ry="50" fill="#4A3728" />
+    <rect x="53" y="50" width="104" height="26" rx="8" fill="#4A3728" />
+    {/* Boy face */}
+    <ellipse cx="105" cy="82" rx="44" ry="42" fill="#FDDCB5" />
+    {/* Boy hair fringe */}
+    <path d="M63 68 Q78 42 105 46 Q132 42 147 68 Q142 54 125 50 Q105 38 85 50 Q68 54 63 68Z" fill="#4A3728" />
+    {/* Boy eyes (closed happy) */}
+    <path d="M85 84 Q90 90 95 84" stroke="#2D1B0E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    <path d="M115 84 Q120 90 125 84" stroke="#2D1B0E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Boy blush */}
+    <ellipse cx="78" cy="95" rx="9" ry="5" fill="#F9A8B8" opacity="0.6" />
+    <ellipse cx="132" cy="95" rx="9" ry="5" fill="#F9A8B8" opacity="0.6" />
+    {/* Boy smile */}
+    <path d="M92 100 Q105 112 118 100" stroke="#C47A5A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Boy body */}
+    <path d="M68 120 Q65 132 60 165 L60 215 Q60 228 105 228 Q150 228 150 215 L150 165 Q145 132 142 120 Q130 115 105 115 Q80 115 68 120Z" fill="#5B8DBE" />
+    {/* Boy arm wrapping around girl */}
+    <path d="M148 145 Q168 140 195 145 Q215 150 220 165 Q222 175 210 178 Q200 175 195 168 Q188 160 180 165 L175 210" fill="#FDDCB5" stroke="#F0C9A0" strokeWidth="1.5" />
+    {/* Boy left arm behind */}
+    <path d="M68 145 Q55 155 48 170 Q45 178 50 176 Q58 170 62 162" fill="#FDDCB5" stroke="#F0C9A0" strokeWidth="1" />
 
-    {/* ── Dudu (Brown Bear, right) ── */}
-    {/* Bear ears */}
-    <ellipse cx="172" cy="40" rx="20" ry="18" fill="#6B4226" />
-    <ellipse cx="244" cy="40" rx="20" ry="18" fill="#6B4226" />
-    <ellipse cx="172" cy="40" rx="12" ry="10" fill="#C8956C" />
-    <ellipse cx="244" cy="40" rx="12" ry="10" fill="#C8956C" />
-    {/* Bear head */}
-    <ellipse cx="208" cy="82" rx="56" ry="52" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    {/* Muzzle */}
-    <ellipse cx="208" cy="94" rx="24" ry="17" fill="#DEBB9A" />
-    {/* Eyes — closed happy */}
-    <path d="M186 78 Q194 72 202 78" stroke="#3D2B1F" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-    <path d="M218 78 Q226 72 234 78" stroke="#3D2B1F" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-    {/* Blush */}
-    <ellipse cx="174" cy="94" rx="11" ry="8" fill="#F0C27A" opacity="0.7" />
-    <ellipse cx="242" cy="94" rx="11" ry="8" fill="#F0C27A" opacity="0.7" />
-    {/* Nose */}
-    <ellipse cx="208" cy="88" rx="5" ry="3.5" fill="#3D2B1F" />
-    {/* Smile */}
-    <path d="M200 100 Q208 110 216 100" stroke="#3D2B1F" strokeWidth="2" fill="none" strokeLinecap="round" />
-    {/* Bear body */}
-    <ellipse cx="208" cy="172" rx="46" ry="44" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    <ellipse cx="208" cy="175" rx="27" ry="25" fill="#DEBB9A" />
-    {/* Bear left arm — wrapping around Bubu */}
-    <path d="M164" cy="158" d="M164 160 Q138 152 118 156 Q98 162 90 178" stroke="#C8956C" strokeWidth="20" strokeLinecap="round" fill="none" />
-    <path d="M164 160 Q138 152 118 156 Q98 162 90 178" stroke="#B8855C" strokeWidth="1" fill="none" />
-    {/* Bear right arm — behind */}
-    <path d="M252 162 Q268 172 275 185" stroke="#C8956C" strokeWidth="18" strokeLinecap="round" fill="none" />
-    <path d="M252 162 Q268 172 275 185" stroke="#B8855C" strokeWidth="1" fill="none" />
-    {/* Bear feet */}
-    <ellipse cx="184" cy="213" rx="16" ry="9" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
-    <ellipse cx="230" cy="213" rx="16" ry="9" fill="#C8956C" stroke="#B8855C" strokeWidth="1" />
+    {/* ─── Girl (right, turned left) ─── */}
+    {/* Girl hair */}
+    <ellipse cx="178" cy="72" rx="52" ry="52" fill="#5C2D0E" />
+    {/* Long hair sides */}
+    <path d="M228 72 Q232 120 230 178 Q228 188 222 183 Q220 130 222 82Z" fill="#5C2D0E" />
+    {/* Girl face */}
+    <ellipse cx="178" cy="86" rx="42" ry="42" fill="#FDE5C8" />
+    {/* Girl hair fringe */}
+    <path d="M138 74 Q148 46 168 42 Q185 36 198 42 Q218 46 228 74 Q220 58 205 52 Q192 44 178 46 Q164 44 151 52 Q140 58 138 74Z" fill="#5C2D0E" />
+    {/* Hair clips */}
+    <circle cx="140" cy="70" r="4.5" fill="#F43F5E" />
+    <circle cx="220" cy="66" r="4.5" fill="#F43F5E" />
+    {/* Girl eyes (closed happy) */}
+    <path d="M162 88 Q167 94 172 88" stroke="#2D1B0E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    <path d="M188 88 Q193 94 198 88" stroke="#2D1B0E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Girl blush */}
+    <ellipse cx="155" cy="100" rx="9" ry="5" fill="#F9A8B8" opacity="0.7" />
+    <ellipse cx="201" cy="100" rx="9" ry="5" fill="#F9A8B8" opacity="0.7" />
+    {/* Girl smile */}
+    <path d="M165 104 Q178 116 191 104" stroke="#C47A5A" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+    {/* Girl dress */}
+    <path d="M142 126 Q135 142 128 210 Q127 228 178 232 Q229 228 228 210 L215 126 Q205 120 178 120 Q151 120 142 126Z" fill="#E11D48" />
+    {/* Girl arm wrapping around boy */}
+    <path d="M142 148 Q122 143 98 148 Q78 153 72 168 Q70 178 80 176 Q88 172 95 165 Q102 158 108 162 L110 208" fill="#FDE5C8" stroke="#F0C9A0" strokeWidth="1.5" />
 
-    {/* ── Heart between them ── */}
-    <g transform="translate(152, 20)">
-      <path d="M10 18l-1.2-1.1C4.5 12.8 2 10.5 2 7.5 2 5 4 3 6.5 3c1.4 0 2.8.7 3.5 1.7C10.7 3.7 12.1 3 13.5 3 16 3 18 5 18 7.5c0 3-2.5 5.3-6.8 9.4L10 18z" fill="#E11D48" />
+    {/* ─── Small heart between them ─── */}
+    <g transform="translate(140, 60) scale(0.6)">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#E11D48" />
     </g>
+
+    {/* Boy legs */}
+    <rect x="80" y="224" width="20" height="32" rx="8" fill="#3D5A80" />
+    <rect x="110" y="224" width="20" height="32" rx="8" fill="#3D5A80" />
+    <ellipse cx="90" cy="260" rx="14" ry="7" fill="#2D1B0E" />
+    <ellipse cx="120" cy="260" rx="14" ry="7" fill="#2D1B0E" />
+
+    {/* Girl legs */}
+    <rect x="155" y="226" width="16" height="28" rx="8" fill="#FDE5C8" />
+    <rect x="185" y="226" width="16" height="28" rx="8" fill="#FDE5C8" />
+    <ellipse cx="163" cy="258" rx="12" ry="6" fill="#E11D48" />
+    <ellipse cx="193" cy="258" rx="12" ry="6" fill="#E11D48" />
   </svg>
 );
 
