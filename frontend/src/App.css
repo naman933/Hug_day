@@ -1,34 +1,142 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Background texture overlay */
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Warm gradient background */
+.warm-bg {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFE4E6 50%, #FFF1F2 100%);
+  min-height: 100vh;
+  position: relative;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Avatar bubble */
+.avatar-bubble {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #FECDD3;
+  box-shadow: 0 10px 40px rgba(225, 29, 72, 0.15), 0 0 0 0 rgba(225, 29, 72, 0);
+  position: relative;
+  z-index: 10;
 }
 
-.App-link {
-    color: #61dafb;
+@media (min-width: 768px) {
+  .avatar-bubble {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.avatar-bubble .initial {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #E11D48;
+  line-height: 1;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .avatar-bubble .initial {
+    font-size: 3.75rem;
+  }
+}
+
+.avatar-bubble .name-label {
+  position: absolute;
+  bottom: -28px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #881337;
+  white-space: nowrap;
+}
+
+/* Floating animation */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.float-left {
+  animation: float-gentle 3s ease-in-out infinite;
+}
+
+.float-right {
+  animation: float-gentle 3s ease-in-out infinite 1.5s;
+}
+
+/* Heart particle */
+.heart-particle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 20;
+  font-size: 1.25rem;
+}
+
+/* Hug merged state glow */
+.hug-glow {
+  box-shadow: 0 0 60px rgba(225, 29, 72, 0.25), 0 0 120px rgba(251, 113, 133, 0.15);
+}
+
+/* CTA button pulse */
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
+  50% { box-shadow: 0 0 0 16px rgba(225, 29, 72, 0); }
+}
+
+.cta-pulse {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Tap hint */
+@keyframes bounce-hint {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+
+.tap-hint {
+  animation: bounce-hint 1.5s ease-in-out infinite 2s;
+}
+
+/* Sparkle */
+@keyframes sparkle {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(180deg); opacity: 1; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+.sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Ambient floating hearts in background */
+@keyframes drift-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.15; }
+  100% {
+    transform: translateY(-20vh) rotate(45deg) scale(1);
+    opacity: 0;
+  }
+}
+
+.ambient-heart {
+  position: fixed;
+  color: #FECDD3;
+  pointer-events: none;
+  z-index: 1;
+  animation: drift-up linear infinite;
 }
