@@ -1,0 +1,99 @@
+{
+  "project_name": "Hug Day Greeting",
+  "design_philosophy": {
+    "theme": "Warm, Intimate, Playful",
+    "core_concept": "The Distance Between Us → The Embrace",
+    "visual_style": "Soft Paper, Pastel Tones, Fluid Motion"
+  },
+  "typography": {
+    "font_family_heading": "'Great Vibes', cursive",
+    "font_family_body": "'Quicksand', sans-serif",
+    "instructions": "Import fonts from Google Fonts: https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap",
+    "scale": {
+      "heading_1": "text-5xl md:text-7xl font-normal leading-tight",
+      "body_large": "text-xl md:text-2xl font-medium tracking-wide",
+      "signature": "text-4xl md:text-5xl"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#FFF5F5",
+      "surface": "#FFFFFF",
+      "primary": "#E11D48",
+      "secondary": "#FB7185",
+      "text_main": "#881337",
+      "text_muted": "#BE123C",
+      "accent": "#F43F5E"
+    },
+    "gradients": {
+      "warm_glow": "linear-gradient(135deg, #FFF5F5 0%, #FFE4E6 100%)",
+      "heart_rush": "linear-gradient(to right, #E11D48, #F43F5E)"
+    }
+  },
+  "layout": {
+    "structure": "Single Page Centered Layout",
+    "grid_system": "Flexbox Centered (h-screen w-full flex items-center justify-center)",
+    "spacing": {
+      "container_padding": "p-8 md:p-12",
+      "element_gap": "gap-8"
+    }
+  },
+  "components": {
+    "AvatarBubble": {
+      "description": "Circular or Heart-shaped containers representing Naman and Sumedha",
+      "style": "w-24 h-24 md:w-32 md:h-32 rounded-full bg-white shadow-xl flex items-center justify-center border-4 border-rose-200 z-10",
+      "motion": "Float animation (y-axis bobbing) in initial state"
+    },
+    "HugButton": {
+      "description": "The trigger for the animation",
+      "style": "px-8 py-4 bg-rose-600 text-white rounded-full font-bold text-xl shadow-lg hover:scale-105 hover:shadow-rose-300/50 transition-all",
+      "text": "Send a Hug"
+    },
+    "SignatureBlock": {
+      "description": "Appears after the hug",
+      "style": "font-['Great_Vibes'] text-rose-800 rotate-[-2deg] opacity-0"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "states": {
+      "initial": "Two avatars separated by distance (one left, one right).",
+      "animate": "Avatars move to center (x: 0), scale up slightly, and merge/bounce.",
+      "celebration": "Explosion of heart particles (canvas or framer-motion layoutId)"
+    },
+    "transition": {
+      "type": "spring",
+      "stiffness": 120,
+      "damping": 15
+    }
+  },
+  "images": {
+    "strategy": "Use abstract representation (Initials/Memojis) or Lucide Icons if no custom photos provided. If photos available, place inside AvatarBubble.",
+    "assets": [
+      {
+        "category": "background",
+        "url": "https://www.transparenttextures.com/patterns/cream-paper.png",
+        "description": "Subtle paper texture overlay (optional)"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. Setup: Install 'framer-motion' and 'lucide-react' if not present.",
+    "2. Structure: Create a main 'HugContainer' component.",
+    "3. Logic: Use a state variable 'isHugged' (boolean).",
+    "4. Initial State: Render two motion.divs (Naman left, Sumedha right). Render a CTA button in the center.",
+    "5. Interaction: On click, set 'isHugged' to true.",
+    "6. Animated State: The two motion.divs animate to x=0 (center). Hide the button. Show the 'Happy Hug Day' text and Signature with a delay.",
+    "7. Particles: Use a simple particle system (can be small motion.div hearts) that spawns on impact.",
+    "8. Audio: (Optional) If possible, add a subtle 'pop' sound effect.",
+    "9. Accessibility: Ensure the button has aria-label='Send virtual hug'.",
+    "10. Optimization: Keep the layout responsive. On mobile, stack them vertically if needed, but horizontal collision is cuter."
+  ],
+  "universal_guidelines": [
+    "Do not use generic gradients.",
+    "Ensure text contrast meets WCAG AA.",
+    "Use 'Great Vibes' ONLY for the signature and main celebratory heading.",
+    "Use 'Quicksand' for instructions and button text.",
+    "Add a subtle noise/grain texture to the background for a premium paper feel."
+  ]
+}
